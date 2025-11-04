@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Johan Rivera Mamani - Portafolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm"
+    >
+      <div class="container-fluid">
+        <a
+          class="navbar-brand fw-bold d-inline-flex align-items-center"
+          href="#home"
+          style="gap: 8px"
+        >
+          <i class="fas fa-code text-warning icon-soft fs-6"></i>
+          <span class="color fs-5">JRM</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sobre-mi">Sobre Mí</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experiencia">Experiencia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#proyectos">Proyectos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#habilidades">Habilidades</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sección 1: Hero -->
+    <section id="inicio" class="hero-section py-5 bg-dark text-white">
+      <div id="particles-js"></div>
+      <div class="container position-relative">
+        <div class="row align-items-center justify-content-center text-center">
+          <!-- Imagen -->
+          <div class="col-lg-5 mb-4 mb-lg-0">
+            <div class="profile-image-strech">
+              <img
+                src="robot1.png"
+                alt="Johan Rivera Mamani"
+                style="max-width: 350px; height: auto"
+              />
+            </div>
+          </div>
+
+          <!-- Texto -->
+          <div class="col-lg-7">
+            <h2
+              class="animation-text fw-semibold mb-3"
+              style="font-size: 1.8rem"
+            >
+              Hola, bienvenid@
+            </h2>
+            <h1 class="fw-bold gradient-text mb-3" style="font-size: 2.3rem">
+              Soy Johan Rivera Mamani
+            </h1>
+
+            <p class="mb-2" style="font-size: 1.1rem">
+              Ing. Sistemas y Computación
+            </p>
+            <p class="fw-semibold gradient-text mb-4" style="font-size: 1.1rem">
+              Desarrollador junior de aplicaciones móviles y web
+            </p>
+            <a href="cvJOHANRiveraM.pdf" download="cvJOHANRiveraM.pdf" class="btn btn-warning fw-bold px-4 py-2" >
+              <i class="fas fa-download me-2"></i>Descargar CV
+            </a>
+            <div class="mt-4 d-flex justify-content-center gap-4">
+              <i class="fab fa-laravel fs-3 text-warning"></i>
+              <i class="fab fa-react fs-3 text-info"></i>
+              <i class="fab fa-js fs-3 text-warning"></i>
+              <i class="fas fa-database fs-3 text-light"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 2: Sobre Mí -->
+    <section id="sobre-mi" class="section-expandible py-5 bg-light">
+      <div class="container">
+        <div class="section-header" onclick="toggleSection(this)">
+          <h2 class="section-title">
+            <i class="fas fa-user-circle text-warning"></i> Sobre Mí
+            <span class="toggle-icon float-end">
+              <i class="fas fa-chevron-down"></i>
+            </span>
+          </h2>
+        </div>
+
+        <div class="section-content">
+          <div class="row">
+            <div
+              class="card border-0 shadow-sm p-4"
+              style="
+                background: rgba(255, 255, 255, 0.05);
+                border-left: 5px solid #ffc107;
+              "
+            >
+              <!-- Primera fila: imagen + primer párrafo -->
+              <div class="row align-items-center mb-3">
+                <div class="col-md-8">
+                  <p class="mb-0" style="font-size: 1.05rem; line-height: 1.8">
+                    Soy
+                    <strong>Ingeniero en Sistemas y Computación</strong>
+                    apasionado por la tecnología, la innovación y el desarrollo
+                    de soluciones que mejoran la vida de las personas. Tengo
+                    experiencia en el área de
+                    <strong>Tecnologías de la Información</strong> y disfruto
+                    especialmente programar y crear aplicaciones tanto
+                    <strong>web</strong> como <strong>móviles</strong>.
+                  </p>
+                </div>
+                <div class="col-md-4 text-center mb-3 mb-md-0">
+                  <img
+                    src="robot.png"
+                    alt="Johan Rivera"
+                    class="img-fluid rounded-circle shadow"
+                    style="max-width: 180px"
+                  />
+                </div>
+              </div>
+
+              <!-- Segundo párrafo a ancho completo -->
+              <p class="mb-4" style="font-size: 1.05rem; line-height: 1.8">
+                Trabajo con tecnologías como
+                <strong>Laravel, Flutter, SQL y Sqflite</strong>, buscando
+                siempre combinar un diseño moderno con un código limpio,
+                escalable y eficiente. Me motiva aprender constantemente y
+                asumir nuevos desafíos que impulsen mi crecimiento profesional.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 3: Experiencia -->
+    <section id="experiencia" class="section-expandible py-5">
+      <div class="container">
+        <div class="section-header" onclick="toggleSection(this)">
+          <h2 class="section-title">
+            <i class="fas fa-briefcase text-warning"></i> Experiencia
+            <span class="toggle-icon float-end">
+              <i class="fas fa-chevron-down"></i>
+            </span>
+          </h2>
+        </div>
+
+        <div class="section-content">
+          <br />
+          <div class="experience-item mb-4">
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <h4 class="fw-bold text-warning">
+                  Asistente de T.I./NOVOCORTE S.A.C 
+                </h4>
+                <p class="text-muted mb-2">Enero 2021 - Junio 2021</p>
+              </div>
+            </div>
+            <p class="text-light">
+            -    Brindar soporte al parque informático de la empresa
+            -    Realizar reportes según lo solicitado a nivel SQL
+            -    Creación de sistemas acorde a la empresa
+            </p>
+          </div>
+
+          <div class="hidden-content">
+            <div class="experience-item mb-4">
+              <div class="d-flex justify-content-between align-items-start">
+                <div>
+                  <h4 class="fw-bold text-warning">
+                    Practicante - Corte Superior de Junin
+                  </h4>
+                  <p class="text-muted mb-2">2022 - 2023</p>
+                </div>
+              </div>
+              <p class="text-light">
+                Apoyo en el area de Informatica en el departamento de desarrollo y Soporte Tecnico.
+              </p>
+            </div>
+
+            <div class="experience-item mb-4">
+              <div class="d-flex justify-content-between align-items-start">
+                <div>
+                  <h4 class="fw-bold text-warning">Freelancer</h4>
+                  <p class="text-muted mb-2">2021 - Presente</p>
+                </div>
+              </div>
+              <p class="text-light">
+                Desarrollo de sitios web y aplicaciones móviles para clientes
+                independientes.
+              </p>
+            </div>
+          </div>
+
+          <button class="btn btn-outline-warning ver-mas-btn">Ver más</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 4: Proyectos -->
+    <section id="proyectos" class="section-expandible py-5 bg-light">
+      <div class="container">
+        <div class="section-header" onclick="toggleSection(this)">
+          <h2 class="section-title">
+            <i class="fas fa-project-diagram text-warning"></i> Proyectos
+            <span class="toggle-icon float-end">
+              <i class="fas fa-chevron-down"></i>
+            </span>
+          </h2>
+        </div>
+
+        <div class="section-content">
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <br />
+              <div class="project-card" data-title="App InfoSchool" data-images="img/app/a1.jpg,img/app/a2.jpg,img/app/a3.jpg,img/app/a4.jpg,img/app/a5.jpg,img/app/a6.jpg,img/app/a7.jpg,img/app/a8.jpg,img/app/a9.jpg,img/app/a10.jpg,img/app/a11.jpg">
+                <img
+                  src="img/app/a1.jpg"
+                  alt="Proyecto 1"
+                  class="img-fluid rounded mb-3 d-block mx-auto"style="max-height: 250px; object-fit: cover;"
+                />
+                <h5 class="fw-bold text-warning">App de Informacion escolar</h5>
+                <p class="text-dark">
+                  Aplicación móvil desarrollada con Flutter para gestion la informacion de los alumnos contiene notificaciones, exportar e importar base de datos, registro de asistencias entre otros.
+                </p>
+                <div class="tech-tags">
+                  <span class="badge bg-warning text-dark">Flutter</span>
+                  <span class="badge bg-warning text-dark">SQFlite</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <br />
+              <div
+                class="project-card"
+                data-title="Sitio Web E-commerce"
+                data-images="img/e-commerce/page1.png,img/e-commerce/page2.png,img/e-commerce/page3.png,img/e-commerce/page4.png,img/e-commerce/page5.png,img/e-commerce/page6.png,img/e-commerce/page7.png,img/e-commerce/page8.png,img/e-commerce/page9.png,img/e-commerce/page10.png,img/e-commerce/page11.png,img/e-commerce/page12.png,img/e-commerce/page13.png,img/e-commerce/page14.png,img/e-commerce/page15.png,img/e-commerce/page16.png,img/e-commerce/page17.png,img/e-commerce/page18.png,img/e-commerce/page19.png"
+              >
+                <img
+                  src="img/e-commerce/page1.png"
+                  alt="Proyecto E-commerce"
+                  class="img-fluid rounded mb-3 project-thumb"
+                />
+                <h5 class="fw-bold text-warning">Sitio Web E-commerce</h5>
+                <p class="text-dark">
+                  Plataforma de comercio electrónico con carrito de compras y
+                  pasarela de pago con Mercado Pago.
+                </p>
+                <div class="tech-tags">
+                  <span class="badge bg-warning text-dark">Laravel 8</span>
+                  <span class="badge bg-warning text-dark">Sql Server</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hidden-content">
+            <br />
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div
+                  class="project-card"
+                  data-title="Sistema matricula"
+                  data-images="img/matricula/mat1.png,img/matricula/mat2.png,img/matricula/mat3.png,img/matricula/mat4.png,img/matricula/mat5.png,img/matricula/mat6.jpg,img/matricula/mat7.png,img/matricula/mat8.png,img/matricula/mat9.png,img/matricula/mat10.png,img/matricula/mat11.png"
+                >
+                  <img
+                    src="img/matricula/mat7.png"
+                    alt="Proyecto Sitema-matricula"
+                    class="img-fluid rounded mb-3"
+                  />
+                  <h5 class="fw-bold text-warning">Sistema de Matricula</h5>
+                  <p class="text-dark">Sistema de registro de matriculas .</p>
+                  <div class="tech-tags">
+                    <span class="badge bg-warning text-dark"
+                      >CodeIgniter 4</span
+                    >
+                    <span class="badge bg-warning text-dark">Sql Server</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div
+                  class="project-card"
+                  data-title="Sistema de ventas"
+                  data-images="img/ventas/ven1.png,img/ventas/ven2.png,img/ventas/ven3.png,img/ventas/ven4.png,img/ventas/ven5.png,img/ventas/ven6.png,img/ventas/ven7.png"
+                >
+                  <img
+                    src="img/ventas/ven6.png"
+                    alt="Proyecto 4"
+                    class="img-fluid rounded mb-3"
+                  />
+                  <h5 class="fw-bold text-warning">Sistema de ventas</h5>
+                  <p class="text-dark">Sistema de ventas.</p>
+                  <div class="tech-tags">
+                    <span class="badge bg-warning text-dark">Laravel</span>
+                    <span class="badge bg-warning text-dark">Sql Server</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+         
+        </div>
+         <button class="btn btn-outline-warning ver-mas-btn">Ver más</button>
+      </div>
+    </section>
+
+    <!-- Sección 5: Habilidades -->
+    <section id="habilidades" class="section-expandible py-5">
+      <div class="container">
+        <div class="section-header" onclick="toggleSection(this)">
+          <h2 class="section-title">
+            <i class="fas fa-star text-warning"></i> Habilidades
+            <span class="toggle-icon float-end">
+              <i class="fas fa-chevron-down"></i>
+            </span>
+          </h2>
+        </div>
+        <div class="section-content">
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <br />
+              <h5 class="fw-bold text-warning mb-3">Frontend</h5>
+              <div class="skill-item mb-3">
+                <div class="d-flex justify-content-between mb-2">
+                  <span class="text-light">Laravel</span>
+                  <span class="text-warning">60%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar bg-warning" style="width: 60%"></div>
+                </div>
+              </div>
+              <div class="skill-item mb-3">
+                <div class="d-flex justify-content-between mb-2">
+                  <span class="text-light">JavaScript</span>
+                  <span class="text-warning">60%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar bg-warning" style="width: 60%"></div>
+                </div>
+              </div>
+              <div class="skill-item mb-3">
+                <div class="d-flex justify-content-between mb-2">
+                  <span class="text-light">Bootstrap & CSS</span>
+                  <span class="text-warning">80%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar bg-warning" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <br />
+              <h5 class="fw-bold text-warning mb-3">Backend</h5>
+              <div class="skill-item mb-3">
+                <div class="d-flex justify-content-between mb-2">
+                  <span class="text-light">Node.js</span>
+                  <span class="text-warning">40%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar bg-warning" style="width: 40%"></div>
+                </div>
+              </div>
+              <div class="skill-item mb-3">
+                <div class="d-flex justify-content-between mb-2">
+                  <span class="text-light">Bases de Datos</span>
+                  <span class="text-warning">75%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar bg-warning" style="width: 75%"></div>
+                </div>
+              </div>
+              <div class="skill-item mb-3">
+                <div class="d-flex justify-content-between mb-2">
+                  <span class="text-light">APIs REST</span>
+                  <span class="text-warning">40%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar bg-warning" style="width: 40%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hidden-content">
+            <div class="row mt-4">
+              <div class="col-md-6 mb-4">
+                <h5 class="fw-bold text-warning mb-3">Móvil</h5>
+                <div class="skill-item mb-3">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-light">React</span>
+                    <span class="text-warning">30%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar bg-warning"
+                      style="width: 30%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="skill-item mb-3">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-light">Flutter</span>
+                    <span class="text-warning">80%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar bg-warning"
+                      style="width: 80%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <h5 class="fw-bold text-warning mb-3">Herramientas</h5>
+                <div class="skill-item mb-3">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-light">Git & GitHub</span>
+                    <span class="text-warning">50%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar bg-warning"
+                      style="width: 50%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="skill-item mb-3">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-light">Docker</span>
+                    <span class="text-warning">30%</span>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar bg-warning"
+                      style="width: 30%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-outline-warning ver-mas-btn">Ver más</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5 mt-5">
+      <div class="text-center">
+        <p class="mb-0">
+          &copy; 2025 Johan Rivera Mamani. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Flotante -->
+    <div class="whatsapp-button" onclick="toggleChatbot()">
+      <i class="fab fa-whatsapp"></i>
+    </div>
+
+    <!-- Chatbot Flotante -->
+    <div class="chatbot-container" id="chatbot">
+      <div class="chatbot-header">
+        <h5 class="mb-0">¡Hola! 👋</h5>
+        <button
+          class="btn-close btn-close-white"
+          onclick="toggleChatbot()"
+        ></button>
+      </div>
+      <div class="chatbot-messages" id="chatMessages">
+        <div class="message bot-message">
+          <p>¿Hola! Soy el asistente de Johan. ¿En qué puedo ayudarte?</p>
+        </div>
+      </div>
+      <div class="chatbot-options" id="chatOptions">
+        <button
+          class="option-btn"
+          onclick="sendMessage('¿Cuál es tu experiencia?')"
+        >
+          ¿Cuál es tu experiencia?
+        </button>
+        <button
+          class="option-btn"
+          onclick="sendMessage('¿Qué tecnologías usas?')"
+        >
+          ¿Qué tecnologías usas?
+        </button>
+        <button
+          class="option-btn"
+          onclick="sendMessage('¿Cómo puedo contactarte?')"
+        >
+          ¿Cómo puedo contactarte?
+        </button>
+        <button
+          class="option-btn"
+          onclick="sendMessage('Quiero contratar tus servicios')"
+        >
+          Quiero contratar tus servicios
+        </button>
+      </div>
+      <div class="chatbot-input">
+        <input
+          type="text"
+          id="userInput"
+          placeholder="Escribe tu mensaje..."
+          onkeypress="handleKeyPress(event)"
+        />
+        <button onclick="sendUserMessage()">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+    <!-- MODAL -->
+    <div class="modal fade" id="projectModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark text-white border-0">
+          <div class="modal-header border-0">
+            <h5 class="modal-title text-warning" id="projectTitle"></h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <div
+              id="projectCarousel"
+              class="carousel slide"
+              data-bs-touch="true"
+              data-bs-ride="false"
+            >
+              <div class="carousel-indicators" id="carouselIndicators"></div>
+              <div class="carousel-inner" id="carouselInner"></div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#projectCarousel"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#projectCarousel"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Siguiente</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 50 },
+          color: { value: "#ffc107" },
+          shape: { type: "circle" },
+          opacity: { value: 0.5 },
+          size: { value: 3 },
+          move: { speed: 2 },
+        },
+        interactivity: {
+          events: { onhover: { enable: true, mode: "repulse" } },
+        },
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Inicializa: delegación por si las cards se agregan dinámicamente
+        document.body.addEventListener("click", (e) => {
+          const card = e.target.closest(".project-card[data-images]");
+          if (!card) return;
+
+          const title = card.dataset.title || "Proyecto";
+          const images = (card.dataset.images || "")
+            .split(",")
+            .map((s) => s.trim())
+            .filter(Boolean);
+
+          // Elementos del modal / carrusel
+          const modalEl = document.getElementById("projectModal");
+          const carouselInner = document.getElementById("carouselInner");
+          const carouselIndicators =
+            document.getElementById("carouselIndicators");
+          const modalTitle = document.getElementById("projectTitle");
+
+          modalTitle.textContent = title;
+          carouselInner.innerHTML = "";
+          carouselIndicators.innerHTML = "";
+
+          // Si no hay imágenes, muestra una imagen placeholder
+          if (images.length === 0) {
+            images.push(
+              "https://via.placeholder.com/1200x700?text=Imagen+no+disponible"
+            );
+          }
+
+          images.forEach((src, i) => {
+            const active = i === 0 ? "active" : "";
+
+            // Slides
+            const item = document.createElement("div");
+            item.className = `carousel-item ${active}`;
+            const img = document.createElement("img");
+            img.src = src;
+            img.alt = `${title} - ${i + 1}`;
+            img.className = "d-block w-100 rounded";
+            img.style.maxHeight = "70vh";
+            img.style.objectFit = "contain";
+            item.appendChild(img);
+            carouselInner.appendChild(item);
+
+            // Indicators
+            const indicator = document.createElement("button");
+            indicator.type = "button";
+            indicator.setAttribute("data-bs-target", "#projectCarousel");
+            indicator.setAttribute("data-bs-slide-to", i.toString());
+            if (i === 0) {
+              indicator.className = "active";
+              indicator.setAttribute("aria-current", "true");
+            }
+            indicator.setAttribute("aria-label", `Slide ${i + 1}`);
+            carouselIndicators.appendChild(indicator);
+          });
+
+          // Si ya existe una instancia de carousel, destrúyela antes de crear nueva instancia
+          const carouselEl = document.getElementById("projectCarousel");
+          if (carouselEl._bsInstance) {
+            try {
+              carouselEl._bsInstance.dispose();
+            } catch (err) {
+              /* ignore */
+            }
+          }
+
+          // Inicializamos el carousel con soporte táctil y sin autoplay
+          const carousel = new bootstrap.Carousel(carouselEl, {
+            touch: true,
+            interval: false,
+            wrap: true,
+          });
+          // Guardamos referencia en el DOM para futuras disposiciones
+          carouselEl._bsInstance = carousel;
+
+          // Muestra modal con Bootstrap
+          const modal = new bootstrap.Modal(modalEl, {
+            backdrop: true,
+            keyboard: true,
+          });
+          modal.show();
+
+          // Aseguramos que al cerrar se limpie la instancia del carousel para evitar problemas
+          modalEl.addEventListener("hidden.bs.modal", function handler() {
+            try {
+              carousel.dispose();
+            } catch (e) {
+              /* ignore */
+            }
+            modalEl.removeEventListener("hidden.bs.modal", handler);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
