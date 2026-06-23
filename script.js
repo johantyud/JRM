@@ -12,14 +12,13 @@ function toggleSection(header) {
     }, 100);
 }
 
-// Ver más button functionality
+// Ver más button 
 document.querySelectorAll('.ver-mas-btn').forEach(btn => {
     btn.addEventListener('click', function() {
         const section = this.closest('.section-expandible');
         const header = section.querySelector('.section-header');
         toggleSection(header);
         
-        // Change button text
         this.textContent = header.classList.contains('active') ? 'Ver menos' : 'Ver más';
     });
 });
@@ -30,7 +29,6 @@ function toggleChatbot() {
     chatbot.classList.toggle('active');
 }
 
-// Predefined responses
 const responses = {
     '¿Cuál es tu experiencia?': 'Tengo experiencia como desarrollador junior en aplicaciones móviles, web y soporte tecnico. He trabajado con Laravel, CodeIgniter, Flutter y bases de datos. Actualmente estoy en búsqueda de nuevas oportunidades para crecer profesionalmente.',
     '¿Qué tecnologías usas?': 'Utilizo principalmente: Laravel, JavaScript, Bootstrap, CSS3, Firebase, Sql Server, SqFlite y Git. También tengo conocimientos en Flutter.',
@@ -42,28 +40,23 @@ function sendMessage(message) {
     const chatMessages = document.getElementById('chatMessages');
     const chatOptions = document.getElementById('chatOptions');
     
-    // Add user message
     const userMsg = document.createElement('div');
     userMsg.className = 'message user-message';
     userMsg.innerHTML = `<p>${message}</p>`;
     chatMessages.appendChild(userMsg);
-    
-    // Hide options
+
     chatOptions.style.display = 'none';
-    
-    // Simulate bot response delay
+
     setTimeout(() => {
         const botMsg = document.createElement('div');
         botMsg.className = 'message bot-message';
         const response = responses[message] || 'Gracias por tu mensaje. Sera redirigido a whatsapp.';
         botMsg.innerHTML = `<p>${response}</p>`;
         chatMessages.appendChild(botMsg);
-        
-        // Scroll to bottom
+
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }, 500);
-    
-    // Scroll to bottom
+
     chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
@@ -72,22 +65,11 @@ function sendUserMessage() {
     const message = input.value.trim();
     
     if (message) {
-        // Envías el mensaje al chatbot (si tienes esa función)
         sendMessage(message);
-
-        // Número de WhatsApp al que se enviará el mensaje
-        const phoneNumber = '+51978415913'; // <-- cámbialo por tu número sin espacios ni símbolos
-        
-        // Codificar el mensaje para URL
+        const phoneNumber = '+51994803768'; 
         const encodedMessage = encodeURIComponent(message);
-        
-        // Crear la URL completa para abrir WhatsApp
         const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
-        
-        // Abrir WhatsApp en una nueva pestaña o ventana
         window.open(whatsappURL, '_blank');
-
-        // Limpiar el input
         input.value = '';
     }
 }
